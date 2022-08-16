@@ -1,0 +1,14 @@
+name: neubtf_env
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - cudatoolkit=11.3.1
+  - pytorch=1.11.0
+  - jupyter
+  - python=3.9
+  - matplotlib
+  - torchvision
+  - tqdm
+  - pip:
+    - btf-extractor==1.7.0
