@@ -2,7 +2,7 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 import utils
-from tqdm import tqdm
+from tqdm.autonotebook import tqdm
 from btf_extractor import Ubo2014
 
 # TODO: implement abstract BTFDataset class and UBO specific
@@ -29,7 +29,7 @@ class BTFDataset(Dataset):
         self.data = np.empty((self.train_size, self.img_width, self.img_width, self.data_ch), dtype=np.float32)
         
         print("importing btf dataset: {} \n".format(path))
-        for n, a in enumerate(tqdm(angles)):
+        for n, a in enumerate(tqdm(self.train)):
             t_l, p_l, t_v, p_v = a
             image = self.btf.angles_to_image(*a)
             image = image[...,::-1].copy()
