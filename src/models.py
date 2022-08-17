@@ -92,10 +92,10 @@ class NeuTex(nn.Module):
         self.tex = nn.Parameter(tex)
     
     def forward(self, uvs):
-        coords = NeuTex.uvs2coords(uvs)
+        coords = self.uvs2coords(uvs)
         return self.grid_sample(coords)
     
-    def uvs2coords(uvs):
+    def uvs2coords(self, uvs):
         coords = uvs - torch.trunc(uvs)
         return utils.uvs2coords(coords)
     
