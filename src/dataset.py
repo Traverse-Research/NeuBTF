@@ -123,6 +123,13 @@ class BTFDataset(Dataset):
         for i in range(self.train_size):
             yield self.get_sample(i)
     
+    def get_input(size, wo=[0. , 0.], wi=[0. , 0.], level=0):
+        coords =    utils.create_uvs(size)
+        wi =        np.tile(utils.spherical2dir(*wi), (size, size, 1))
+        wo =        np.tile(utils.spherical2dir(*wo), (size, size, 1))
+        level =     np.tile(level, (size, size, 1))
+        return coords, level, wi, wo
+    
     def __len__(self):
         return self.train_size
 

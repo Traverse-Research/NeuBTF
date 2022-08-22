@@ -30,7 +30,7 @@ ablation_config = [
 
 train_config={
     "ds_name": "leather11",
-    "total_steps": 15,
+    "total_steps": 2,
     "batch_size":1,
     "siren": True,
     "shared": False,
@@ -93,23 +93,32 @@ def init_model(train_config, cuda=True):
         n_levels=train_config["levels"]) # in, hidden,#hidden, out
     if cuda:
         model.cuda()
+    
+    print(model)
     return model
 
-def train(config, train_dataloader=None, btf_ds=None):
+def train(config, model=None, train_dataloader=None, btf_ds=None):
     if btf_ds == None:
         ds_dir = os.path.join("..","dataset","UBO2014")
         ds_path = os.path.join(ds_dir,".".join((config["ds_name"], "btf")) )
         btf_ds = BTFDataset(ds_path, train_size=1024)
         train_dataloader = DataLoader(btf_ds, batch_size=config["batch_size"], num_workers=0)
-    model = init_model(config)
-    print(model)
+    
+    if train_dataloader == None:
+        train_dataloader = DataLoader(btf_ds, batch_size=config["batch_size"], num_workers=0)
+
+    if model == None:
+        model = init_model(config)
+        
     total_steps = config["total_steps"]
     optim = torch.optim.Adam(lr=1e-4, params=model.parameters())
     count = 0
+    loss_history = list()
 
     for step in tqdm(range(total_steps)):
-        
-        for n, (gt, co, l, wi, wo) in enumerate(tqdm(train_dataloader)):
+        batch_bar = tqdm(train_dataloader)
+        epoch_history = list()
+        for n, (gt, co, l, wi, wo) in enumerate(batch_bar):
             gt, co, l, wi, wo = (gt.cuda(), co.cuda(), l.cuda(), wi.cuda(), wo.cuda())
 
             model_output, _, _, _,  = model(co, l, wi, wo, False)
@@ -125,17 +134,20 @@ def train(config, train_dataloader=None, btf_ds=None):
             total_loss.backward()
             optim.step()
 
+           
                 
             if (count + 1) % config["steps_till_summary"] == 0:
                 show_sample(model, btf_ds, 1)
-
-            # TODO return loss
+            
+            total_loss = total_loss.detach().cpu().numpy()
+            epoch_history.append(total_loss)
+            batch_bar.set_description("Loss: {:.4f}".format(total_loss))
     
             count += 1
-        
-        model.fuse_blur(step, total_steps)
+        loss_history.append(epoch_history)
+        #model.fuse_blur(step, total_steps)
 
-    del model
+    return model, np.array(loss_history)
 
 if __name__ == "__main__":
     
@@ -168,19 +180,19 @@ if __name__ == "__main__":
             os.mkdir(save_path)
             
         for n, (siren, shared, concat) in enumerate(tqdm(ablation_config)):
-            if True:
+            train_config["siren"] = siren
+            train_config["shared"] = shared
+            train_config["concat"] = concat
+
+            if concat:
+                train_config["embeddings_ch"] = 4
+            else:
+                train_config["embeddings_ch"] = 7
+            print('running configuration {}: {} {} {}'.format(n, siren, shared, concat))
+
+            train_config["out_path"] = os.path.join(save_path,'{}.pth'.format(1 + n))
+            train_config["render_path"] = os.path.join(render_path,'{}.jpg'.format(1 + n))
+            out_model, history = train(train_config, train_dataloader, btf_ds)
+            del out_model, history
             
-                train_config["siren"] = siren
-                train_config["shared"] = shared
-                train_config["concat"] = concat
-
-                if concat:
-                    train_config["embeddings_ch"] = 4
-                else:
-                    train_config["embeddings_ch"] = 7
-                print('running configuration {}: {} {} {}'.format(n, siren, shared, concat))
-
-                train_config["out_path"] = os.path.join(save_path,'{}.pth'.format(1 + n))
-                train_config["render_path"] = os.path.join(render_path,'{}.jpg'.format(1 + n))
-                train(train_config, train_dataloader, btf_ds)
         del btf_ds, train_dataloader
