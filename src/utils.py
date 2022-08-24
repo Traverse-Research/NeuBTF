@@ -48,5 +48,4 @@ def uvs2coords(uvs: torch.Tensor) -> torch.Tensor:
     coords[..., 1] = uvs[..., 0]
     # normalize to [-1., 1.]
     coords = coords * 2. - 1.
-    spherical2dir
     return coords
