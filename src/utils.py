@@ -1,5 +1,16 @@
 import numpy as np
 import torch
+import os
+
+def build_path(path: list[str]):
+    out = path[0]
+    if not os.path.isdir(out):
+        os.mkdir(out) 
+    for f in path[1:]:
+        out = os.path.join(out, f)
+        if not os.path.isdir(out):
+            os.mkdir(out) 
+    return out
 
 # ds related
 # converts spherical coords to 3D directions
