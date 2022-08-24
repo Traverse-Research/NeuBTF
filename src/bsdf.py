@@ -26,7 +26,8 @@ class NeuBSDF(BSDF):
     
     def btf_sample(self, wi, wo, uv):       
         uv = self.m_transform.transform_point(uv)
-        rgb = self.btf.btf_sample(np.array(wi), np.array(wo), np.array(uv))
+        uv = np.where(uv>=0., uv - np.trunc(uv), 1. + (uv - np.trunc(uv)))
+        rgb = self.btf.btf_sample(np.array(wo), np.array(wi), np.array(uv))
         rgb = np.clip(rgb, 0., 1.)
         return Vector3f(rgb)
 
