@@ -132,3 +132,7 @@ dmypy.json
 dataset/
 models/
 rendering/
+
+# scene files from other sources
+scenes/envmaps
+scenes/meshes
