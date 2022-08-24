@@ -30,7 +30,7 @@ ablation_config = [
 
 train_config={
     "ds_name": "leather11",
-    "total_steps": 2,
+    "total_steps": 15,
     "batch_size":1,
     "siren": True,
     "shared": False,
@@ -97,7 +97,7 @@ def init_model(train_config, cuda=True):
     print(model)
     return model
 
-def train(config, model=None, train_dataloader=None, btf_ds=None):
+def train(config, model=None, train_dataloader=None, btf_ds=None, save=False):
     if btf_ds == None:
         ds_dir = os.path.join("..","dataset","UBO2014")
         ds_path = os.path.join(ds_dir,".".join((config["ds_name"], "btf")) )
@@ -146,7 +146,8 @@ def train(config, model=None, train_dataloader=None, btf_ds=None):
             count += 1
         loss_history.append(epoch_history)
         #model.fuse_blur(step, total_steps)
-
+    if save:
+        torch.save(model.state_dict(), config["out_path"])
     return model, np.array(loss_history)
 
 if __name__ == "__main__":
@@ -192,7 +193,7 @@ if __name__ == "__main__":
 
             train_config["out_path"] = os.path.join(save_path,'{}.pth'.format(1 + n))
             train_config["render_path"] = os.path.join(render_path,'{}.jpg'.format(1 + n))
-            out_model, history = train(train_config, train_dataloader, btf_ds)
+            out_model, history = train(train_config, train_dataloader, btf_ds, True)
             del out_model, history
             
         del btf_ds, train_dataloader
