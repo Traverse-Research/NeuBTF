@@ -1,0 +1,47 @@
+<!-- cloth.obj and scene from https://github.com/elerac/btf-rendering/tree/master/scenes/cloth -->
+<scene version="2.0.0">
+	<integrator type="path">
+			<integer name="samples_per_pass" value="2"/>
+	</integrator>
+
+	<sensor type="perspective">
+		<sampler type="independent">
+			<integer name="sample_count" value="128"/>
+		</sampler>
+
+		<transform name="to_world">
+			<lookat origin="5.3, 3, 5.6" target="0, 0.2, 1.2" up="0, 1, 0"/>
+		</transform>
+		
+		<film type="hdrfilm">
+			<integer name="width"  value="720"/>
+			<integer name="height" value="480"/>
+		</film>
+	</sensor>
+	
+	<emitter type="envmap">
+		<!-- https://hdrihaven.com/files/hdris/skylit_garage_1k.hdr -->
+		<string name="filename" value="envmaps/skylit_garage_1k.hdr"/>
+	</emitter>
+	
+	<shape type="obj">
+		
+		<string name="filename" value="meshes/cloth.obj"/>
+		
+		<bsdf type="twosided">
+			<bsdf type="neubtf">
+				<transform name="to_uv">
+                	<scale value="5"/>
+            	</transform>
+			</bsdf>
+		</bsdf>
+	</shape>
+
+	<shape type="rectangle">
+		<transform name="to_world">
+			<rotate  x="1" angle="-90"/>
+        	<scale value="5"/>
+		</transform>
+	</shape>
+
+</scene>
