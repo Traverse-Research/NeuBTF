@@ -26,14 +26,19 @@ We run the experiments on two datasets:
 
 ### Comparisons on UBO2014 materials
 
+#### Carpet07
 <div class="juxtapose" width="100%">
     <img src="assets/carpet07/1.jpg" data-label="NeuMIP"/>
     <img src="assets/carpet07/6.jpg" data-label="Ours"/>
 </div>
+
+#### Carpet11
 <div class="juxtapose" width="100%">
     <img src="assets/carpet11/1.jpg" data-label="NeuMIP"/>
     <img src="assets/carpet11/6.jpg" data-label="Ours"/>
 </div>
+
+#### Leather08
 <div class="juxtapose" width="100%">
     <img src="assets/leather08/1.jpg" data-label="NeuMIP"/>
     <img src="assets/leather08/6.jpg" data-label="Ours"/>
