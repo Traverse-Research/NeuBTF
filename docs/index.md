@@ -25,8 +25,8 @@ We run the experiments on two datasets:
 + Neural BTF is part of the broader field of neural scene representation.
 
 <div class="juxtapose">
-    <img src="/assets/carpet07/1.jpg" data-label="NeuMIP"/>
-    <img src="/assets/carpet07/6.jpg" data-label="Ours"/>
+    <img src="NeuBTF/assets/carpet07/1.jpg" data-label="NeuMIP"/>
+    <img src="NeuBTF/assets/carpet07/6.jpg" data-label="Ours"/>
 </div>
 <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
 
