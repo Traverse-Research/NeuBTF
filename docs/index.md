@@ -24,12 +24,20 @@ We run the experiments on two datasets:
 + Our results show that our method achieves better compression quality while using less memory and performance than the baseline.
 + Neural BTF is part of the broader field of neural scene representation.
 
+### Comparisons on UBO2014 materials
+
 <div class="juxtapose" width="100%">
     <img src="assets/carpet07/1.jpg" data-label="NeuMIP"/>
     <img src="assets/carpet07/6.jpg" data-label="Ours"/>
 </div>
-<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
-
+<div class="juxtapose" width="100%">
+    <img src="assets/carpet11/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/carpet11/6.jpg" data-label="Ours"/>
+</div>
+<div class="juxtapose" width="100%">
+    <img src="assets/leather08/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/leather08/6.jpg" data-label="Ours"/>
+</div>
 
 
 ## Discussion
@@ -58,3 +66,6 @@ Luca Quartesan and Carlos Pereira Santos
 }
 
 ```
+
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
