@@ -2,8 +2,9 @@
 
 In this repo you can find our implementation of
 
-> **Neural Bidirectional Texture Function Compression and Rendering**
-> 
+> ![](media/header.jpg)  
+> **Neural Bidirectional Texture Function Compression and Rendering**  
+> SIGGRAPH Asia 2022 Posters, December 2022.  
 > Luca Quartesan, Carlos Santos
 
 ## Requirements
@@ -11,8 +12,6 @@ In this repo you can find our implementation of
 We provide an `environment.yml` to install all requirements using anaconda. If you use another package manager this file shoudl still provide the core packages required to run our experiments.
 
 We recommend the use of a GPU with cuda capabilities to obtain expected perfomance.
-
-
 
 ## Structure
 
@@ -26,3 +25,13 @@ The provided code expects the dataset to be stored in `/dataset`, if downloaded 
 
 ## Scenes
 > To succesfully render in Mitsuba 2 using the provided scenes read [this](scenes/README.md)
+
+few examples trained on UBO2014 dataset and rendered in Mitsuba2 with the scenes provided in `scenes/`.
+
+fabric09             |  carpet07
+:-------------------------:|:-------------------------:
+![](media/fabric09.png)  |  ![](media/carpet07.png)
+
+leather07             |  wood08
+:-------------------------:|:-------------------------:
+![](media/leather07.png)  |  ![](media/wood08.png)

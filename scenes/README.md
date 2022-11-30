@@ -5,6 +5,11 @@ The scenes `.xml` can be found in `/scenes`.
 Currently the example scenes are
 + `matpreview_neubtf.xml` 
 + `cloth_neubtf.xml`
++ `cylinder.xml`
++ `cylinder_soft.xml`
++ `sphere.xml`
++ `sphere_soft.xml`
+
 
 To correctly use these scenes: 
 In the `/scenes` folders create two folders: 
