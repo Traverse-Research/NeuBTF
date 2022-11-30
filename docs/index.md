@@ -24,7 +24,7 @@ We run the experiments on two datasets:
 + Our results show that our method achieves better compression quality while using less memory and performance than the baseline.
 + Neural BTF is part of the broader field of neural scene representation.
 
-<iframe frameborder="0" class="juxtapose" width="100%" height="100%" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f580e43c-70ea-11ed-b5bd-6595d9b17862"></iframe>
+<iframe frameborder="0" class="juxtapose" width="100%" height="1280" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f580e43c-70ea-11ed-b5bd-6595d9b17862"></iframe> 
 
 
 ## Discussion
