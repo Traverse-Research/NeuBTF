@@ -1,9 +1,6 @@
-## NeuBTF
-> Neural Bidirectional Texture Function Compression and Rendering
+## Neural Bidirectional Texture Function Compression and Rendering
 
-Luca Quartesan             |  Carlos Pereira Santos
-:---:|:---:
-luca@traverseresearch.nl |  santos.c@buas.nl
+[Luca Quartesan](luca@traverseresearch.nl), [Carlos Santos](santos.c@buas.nl)
 
 ### Context
 Bidirectional Texture Function (BTF) is a data-driven representation of surface materials that can encapsulate complex behaviors, such as self-shadowing and interreflections, that would otherwise be too expensive to render. BTFs can be captured by taking samples from a combination of light and view directions.
@@ -18,8 +15,9 @@ We run the experiments on two datasets:
 2. MBTF from NeuMIP, synthetic.
 
 
+
 ### Results
-![](../media/table.png)
+![](assets/header.jpg)
 
 + Our results show that our method achieves better compression quality while using less memory and performance than the baseline.
 + Neural BTF is part of the broader field of neural scene representation.
@@ -27,3 +25,26 @@ We run the experiments on two datasets:
 ### Discussion
 + When used in a simulation the material only behaves as a diffuse PDF.
 + We do not report performance results from a real-time implementation.
+
+### Paper
+**Neural Bidirectional Texture Function Compression and Rendering**
+Luca Quartesan and Carlos Pereira Santos
++ [Paper preprint]()
++ [BibTeX](assets/quartesan22neubtf.bib)
++ [Code](https://github.com/Traverse-Research/NeuBTF)
+
+### Citation
+```bibtex
+@article{quartesan2022neubtf,
+  title   = "Neural Bidirectional Texture Function Compression and Rendering",
+  author  = "Luca Quartesan and Carlos Pereira Santos",
+  journal = "SIGGRAPH Asia 2022 Posters (SA '22 Posters), December 06-09, 2022"
+  year = {2022},
+  month = dec,
+  numpages = {2},
+  url = {https://doi.org/10.1145/3550082.3564188},
+  doi = {10.1145/3550082.3564188},
+  publisher = {ACM},
+}
+
+```
