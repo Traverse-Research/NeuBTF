@@ -27,6 +27,7 @@
 	
 
     <emitter type="envmap" id="emitter-envmap">
+        <!-- https://www.mitsuba-renderer.org/scenes/matpreview.zip -->
         <string name="filename" value="envmaps/envmap.exr" />
         <transform name="to_world">
             <rotate y="1" angle="-180" />

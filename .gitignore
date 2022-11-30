@@ -135,4 +135,5 @@ rendering/
 
 # scene files from other sources
 scenes/envmaps
-scenes/meshes
+scenes/meshes/matpreview.serialized
+scenes/meshes/cloth.obj
