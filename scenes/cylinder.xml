@@ -19,7 +19,7 @@
 	</sensor>
 	
 	<emitter type="envmap">
-		<string name="filename" value="skylit_garage_1k.hdr"/>
+		<string name="filename" value="envmaps/skylit_garage_1k.hdr"/>
 	</emitter>
 	
 	<shape type="obj">
