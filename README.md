@@ -6,7 +6,8 @@ In this repository you can find our implementation of
 > ![](media/header.jpg)  
 > **Neural Bidirectional Texture Function Compression and Rendering**  
 > SIGGRAPH Asia 2022 Posters, December 2022.  
-> [Luca Quartesan](mailto:luca@traverseresearch.nl), [Carlos Santos](mailto:santos.c@buas.nl)
+> [Luca Quartesan](mailto:luca@traverseresearch.nl), [Carlos Santos](mailto:santos.c@buas.nl)  
+> [Project Page](https://traverse-research.github.io/NeuBTF/) | [Paper](docs/assets/neubtf22.pdf) | [BibTeX](docs/assets/quartesan22neubtf.bib)
 
 ## Requirements
  
@@ -20,7 +21,7 @@ Our pytorch implementation can be found in the folder `/src`
 
 We provide a series of notebooks in the folder `/nbs`:
 + [ubo2014 dataset exploration](/nbs/ubo2014_dataset.ipynb) which also provides a script to download the dataset
-+ [ubo2014 training](/nbs/ubo2014_train.ipynb) shows how the one can train a material and render it in Mitsuba 2
++ [ubo2014 training](/nbs/ubo2014_train.ipynb) shows how one can train a material and render it in Mitsuba 2
 
 The provided code expects the dataset to be stored in `/dataset`, if downloaded with the code provided in the [dataset notebook](/nbs/ubo2014_dataset.ipynb) will be automatically collected there
 
