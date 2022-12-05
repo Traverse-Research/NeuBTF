@@ -1,9 +1,8 @@
 ---
 layout: default
-title: "Results"
 permalink: /results/
 ---
-
+# Results
 
 ![](assets/table.png)
 
@@ -75,3 +74,9 @@ Following we show a comparison between the baseline (NeuMIP) and our models usin
     <img src="../assets/ubo2014/leather11/1.jpg" data-label="NeuMIP"/>
     <img src="../assets/ubo2014/leather11/6.jpg" data-label="Ours"/>
 </div>
+
+
+
+
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
