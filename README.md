@@ -1,6 +1,7 @@
 # NeuBTF
+![](media/banner.png)  
 
-In this repo you can find our implementation of
+In this repository you can find our implementation of
 
 > ![](media/header.jpg)  
 > **Neural Bidirectional Texture Function Compression and Rendering**  
