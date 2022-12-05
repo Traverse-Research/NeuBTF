@@ -23,6 +23,7 @@ We run the experiments on two datasets:
 ### Comparisons
 Following we show a comparison between the baseline (NeuMIP) and our models using configuration 4.  
 > 💡 Note that we train both models for 15000 epochs, which is half of the epochs used in the results reported in NeuMIP. 
+> Comparison of the entire list of ten materials provided in the table above can be found in [results](/results/)
 
 #### NeuMIP materials
 
