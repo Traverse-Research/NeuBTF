@@ -21,10 +21,41 @@ We run the experiments on two datasets:
 ## Results
 ![](assets/table.png)
 
-+ Our results show that our method achieves better compression quality while using less memory and performance than the baseline.
++ Our results show that our method (configuration 4) achieves better compression quality while using less memory and performance than the baseline.
 + Neural BTF is part of the broader field of neural scene representation.
 
-<iframe frameborder="0" class="juxtapose" width="100%" height="1280" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f580e43c-70ea-11ed-b5bd-6595d9b17862"></iframe> 
+### Comparisons
+Following we show a comparison between the baseline (NeuMIP) and our models using configuration 4.  
+> 💡 Note that we train both models for 15000 epochs, which is half of the epochs used in the results reported in NeuMIP. 
+
+#### NeuMIP materials
+
+##### Wool2
+<div class="juxtapose" width="100%">
+    <img src="assets/neumip/wool2/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/neumip/wool2/2.jpg" data-label="Ours"/>
+</div>
+
+##### Cliff
+<div class="juxtapose" width="100%">
+    <img src="assets/neumip/cliff/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/neumip/cliff/2.jpg" data-label="Ours"/>
+</div>
+
+
+#### UBO2014 Materials
+
+##### Carpet07
+<div class="juxtapose" width="100%">
+    <img src="assets/ubo2014/carpet07/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/ubo2014/carpet07/6.jpg" data-label="Ours"/>
+</div>
+
+##### Leather08
+<div class="juxtapose" width="100%">
+    <img src="assets/ubo2014/leather08/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/ubo2014/leather08/6.jpg" data-label="Ours"/>
+</div>
 
 
 ## Discussion
@@ -32,9 +63,9 @@ We run the experiments on two datasets:
 + We do not report performance results from a real-time implementation.
 
 ## Paper
-**Neural Bidirectional Texture Function Compression and Rendering**
+**Neural Bidirectional Texture Function Compression and Rendering**  
 Luca Quartesan and Carlos Pereira Santos
-+ [Paper preprint]()
++ [Paper preprint](assets/neubtf22.pdf)
 + [BibTeX](assets/quartesan22neubtf.bib)
 + [Code](https://github.com/Traverse-Research/NeuBTF)
 
@@ -53,3 +84,6 @@ Luca Quartesan and Carlos Pereira Santos
 }
 
 ```
+
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
