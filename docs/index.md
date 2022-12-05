@@ -63,7 +63,7 @@ Following we show a comparison between the baseline (NeuMIP) and our models usin
 + We do not report performance results from a real-time implementation.
 
 ## Paper
-**Neural Bidirectional Texture Function Compression and Rendering**
+**Neural Bidirectional Texture Function Compression and Rendering**  
 Luca Quartesan and Carlos Pereira Santos
 + [Paper preprint](assets/neubtf22.pdf)
 + [BibTeX](assets/quartesan22neubtf.bib)
