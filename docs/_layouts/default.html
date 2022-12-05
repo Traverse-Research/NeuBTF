@@ -18,13 +18,17 @@
 
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h1 class="project-name">{{ page.description | default: site.description | default: site.github.project_tagline }}</h1>
-      
+      <h1>{{ page.description | default: site.description | default: site.github.project_tagline }}</h1>
+      <h2 class="project-tagline">
+        <i class="fa-solid fa-users"></i> <a class="author" href="mailto:luca@traverseresearch.nl">Luca Quartesan</a>, 
+        <a class="author" href="mailto:santos.c@buas.nl">Carlos Pereira Santos</a>
+      </h2>
+
       <a href="https://github.com/Traverse-Research/NeuBTF" class="btn"><i class="fa-solid fa-code"></i> Code</a>
       <a href="https://traverse-research.github.io/NeuBTF/assets/neubtf22.pdf" class="btn"><i class="fa-solid fa-scroll"></i> Paper</a>
       <a href="https://traverse-research.github.io/NeuBTF/assets/quartesan22neubtf.bib" class="btn"><i class="fa-solid fa-quote-left"></i> BibTeX</a>
 
-      <img src="https://traverse-research.github.io/NeuBTF/assets/banner.png" width="80%">
+      <img src="https://traverse-research.github.io/NeuBTF/assets/banner.png" style="max-width:1000px;width:80%">>
 
     </header>
 

@@ -6,7 +6,7 @@ In this repository you can find our implementation of
 > ![](media/header.jpg)  
 > **Neural Bidirectional Texture Function Compression and Rendering**  
 > SIGGRAPH Asia 2022 Posters, December 2022.  
-> [Luca Quartesan](mailto:luca@traverseresearch.nl), [Carlos Santos](mailto:santos.c@buas.nl)  
+> [Luca Quartesan](mailto:luca@traverseresearch.nl), [Carlos Pereira Santos](mailto:santos.c@buas.nl)  
 > [Project Page](https://traverse-research.github.io/NeuBTF/) | [Paper](docs/assets/neubtf22.pdf) | [BibTeX](docs/assets/quartesan22neubtf.bib)
 
 ## Requirements

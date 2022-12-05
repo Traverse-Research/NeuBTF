@@ -1,9 +1,5 @@
 ![](assets/header.jpg)
 
-# Neural Bidirectional Texture Function Compression and Rendering
-
-[Luca Quartesan](mailto:luca@traverseresearch.nl), [Carlos Santos](mailto:santos.c@buas.nl)
-
 ## Context
 Bidirectional Texture Function (BTF) is a data-driven representation of surface materials that can encapsulate complex behaviors, such as self-shadowing and interreflections, that would otherwise be too expensive to render. BTFs can be captured by taking samples from a combination of light and view directions.
 Neural Networks can learn from BTF data; the current SOTA is called NeuMIP. We propose two changes (Sin, Cat) to improve this technique in terms of memory, performance and quality.

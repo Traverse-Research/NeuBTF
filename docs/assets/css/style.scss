@@ -5,6 +5,7 @@ $header-heading-color: #000;
 $header-bg-color: #ffdb03;
 $header-bg-color-secondary: #ffdb03;
 $section-headings-color: #000;
+$header-link-color: #000;
 
 @import "{{ site.theme }}";
 
@@ -49,5 +50,14 @@ $section-headings-color: #000;
       margin-top: 1rem;
       margin-left: 0;
     }
+  }
+}
+
+.author {
+  color: $header-link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
