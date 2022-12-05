@@ -24,25 +24,50 @@ We run the experiments on two datasets:
 + Our results show that our method achieves better compression quality while using less memory and performance than the baseline.
 + Neural BTF is part of the broader field of neural scene representation.
 
-### Comparisons on UBO2014 materials
+### Comparisons
+Following we show a comparison between the baseline (NeuMIP) and our models.  
+> 💡 Note that we train both models for 15000 epochs, which is half of the epochs used in the results reported in NeuMIP. 
 
-#### Carpet07
+#### NeuMIP materials
+##### Carpet07
 <div class="juxtapose" width="100%">
-    <img src="assets/carpet07/1.jpg" data-label="NeuMIP"/>
-    <img src="assets/carpet07/6.jpg" data-label="Ours"/>
+    <img src="assets/neumip/wool1/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/neumip/wool1/2.jpg" data-label="Ours"/>
 </div>
 
-#### Carpet11
+##### Carpet11
 <div class="juxtapose" width="100%">
-    <img src="assets/carpet11/1.jpg" data-label="NeuMIP"/>
-    <img src="assets/carpet11/6.jpg" data-label="Ours"/>
+    <img src="assets/neumip/wool2/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/neumip/wool2/2.jpg" data-label="Ours"/>
 </div>
 
-#### Leather08
+##### Leather08
 <div class="juxtapose" width="100%">
-    <img src="assets/leather08/1.jpg" data-label="NeuMIP"/>
-    <img src="assets/leather08/6.jpg" data-label="Ours"/>
+    <img src="assets/neumip/foam/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/neumip/foam/2.jpg" data-label="Ours"/>
 </div>
+
+#### UBO2014 Materials
+
+##### Carpet07
+<div class="juxtapose" width="100%">
+    <img src="assets/ubo2014/carpet07/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/ubo2014/carpet07/6.jpg" data-label="Ours"/>
+</div>
+
+##### Carpet11
+<div class="juxtapose" width="100%">
+    <img src="assets/ubo2014/carpet11/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/ubo2014/carpet11/6.jpg" data-label="Ours"/>
+</div>
+
+##### Leather08
+<div class="juxtapose" width="100%">
+    <img src="assets/ubo2014/leather08/1.jpg" data-label="NeuMIP"/>
+    <img src="assets/ubo2014/leather08/6.jpg" data-label="Ours"/>
+</div>
+
+
 
 
 ## Discussion
