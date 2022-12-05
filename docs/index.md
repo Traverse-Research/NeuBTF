@@ -21,9 +21,9 @@ We run the experiments on two datasets:
 + Neural BTF is part of the broader field of neural scene representation.
 
 ### Comparisons
-Following we show a comparison between the baseline (NeuMIP) and our models using configuration 4.  
+Following we show few comparison between the baseline (NeuMIP) and our models using configuration 4.  
 > 💡 Note that we train both models for 15000 epochs, which is half of the epochs used in the results reported in NeuMIP. 
-> Comparison of the entire list of ten materials provided in the table above can be found in [results](/results/)
+> Comparison of the entire list of ten materials provided in the table above can be found in [results](results/)
 
 #### NeuMIP materials
 
