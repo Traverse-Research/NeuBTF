@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /results/
+title: Neural Bidirectional Texture Function Compression and Rendering
 ---
 # Results
 
